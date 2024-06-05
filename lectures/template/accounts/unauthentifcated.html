@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Неаутентифицированный доступ</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .container h1 {
+            color: #ff758c;
+            margin-bottom: 1rem;
+        }
+        .container p {
+            color: #333;
+        }
+        .container a {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #ff758c;
+            text-decoration: none;
+            border: 1px solid #ff758c;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .container a:hover {
+            background: #ff758c;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Доступ запрещен</h1>
+        <p>Вы не аутентифицированы. Пожалуйста, войдите в систему, чтобы получить доступ к этой странице.</p>
+        <a href="{% url 'login' %}">Войти</a>
+    </div>
+</body>
+</html>
